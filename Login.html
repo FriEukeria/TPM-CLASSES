@@ -1,0 +1,29 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Shop Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <h2>Welcome Back to E-Shop</h2>
+    <form action="/login" method="post">
+      <label for="username">Email or Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your email or username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <div class="extra-links">
+      <p><a href="/forgot-password">Forgot Password?</a></p>
+      <p><a href="/register">New to E-Shop? Create an account</a></p>
+    </div>
+  </div>
+</body>
+</html>
