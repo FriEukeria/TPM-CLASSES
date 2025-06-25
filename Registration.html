@@ -1,26 +1,57 @@
+<!-- registration.html - CareConnect -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>User Registration Form</title>
-  <link rel="stylesheet" href="Registration.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | CareConnect</title>
+  <link rel="stylesheet" href="registration.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <h2>User Registration Form</h2>
-  <form action="/submit-form" method="POST">
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+  <div class="registration-container">
+    <!-- Logo (optional) -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img src="careconnect-logo.png" alt="CareConnect Logo" width="100">
+    </div>
 
-    <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <h2>Create Your CareConnect Account</h2>
 
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" placeholder="+2376XXXXXXXX" required><br><br>
+    <form action="/register" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
-    <input type="submit" value="Register">
-  </form>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+      <label for="user-type">Account Type</label>
+      <select id="user-type" name="user-type" required>
+        <option value="">Select one</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <label>
+        <input type="checkbox" required>
+        I agree to the <a href="/terms" target="_blank">Terms & Conditions</a>
+      </label>
+
+      <input type="submit" value="Create Account">
+    </form>
+
+    <div class="login-link">
+      <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+  </div>
 </body>
 </html>
-
-

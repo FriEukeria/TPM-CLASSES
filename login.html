@@ -1,0 +1,54 @@
+<!-- login.html - CareConnect with Dark Mode + Accessibility -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareConnect Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="careconnect-logo.png" alt="CareConnect Logo">
+    </div>
+
+    <h2>Welcome to CareConnect</h2>
+
+    <form action="/login" method="post">
+      <label for="username">Email or Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your email or username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <div class="voice-option">
+      <input type="checkbox" id="voice-toggle" name="voice-toggle">
+      <label for="voice-toggle">Enable Voice Assistance</label>
+    </div>
+
+    <div class="theme-toggle">
+      <label for="darkModeToggle"> Dark Mode</label>
+      <input type="checkbox" id="darkModeToggle">
+    </div>
+
+    <div class="register-link">
+      <p><a href="/forgot-password">Forgot Password?</a></p>
+      <p>Don't have an account? <a href="/register">Register here</a></p>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
